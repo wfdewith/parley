@@ -32,7 +32,7 @@ impl LineLayout {
     }
 }
 
-#[derive(Clone, Default)]
+#[derive(Clone, Default, Debug)]
 struct LineState {
     x: f32,
     items: Range<usize>,
@@ -40,7 +40,7 @@ struct LineState {
     num_spaces: usize,
 }
 
-#[derive(Clone, Default)]
+#[derive(Clone, Default, Debug)]
 struct PrevBoundaryState {
     item_idx: usize,
     run_idx: usize,
@@ -48,7 +48,7 @@ struct PrevBoundaryState {
     state: LineState,
 }
 
-#[derive(Clone, Default)]
+#[derive(Clone, Default, Debug)]
 struct BreakerState {
     /// The number of items that have been processed (used to revert state)
     items: usize,

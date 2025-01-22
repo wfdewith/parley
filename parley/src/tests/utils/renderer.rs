@@ -61,6 +61,15 @@ pub(crate) fn render_layout(
 
     let mut pen = TinySkiaPen::new(img.as_mut());
 
+    draw_rect(
+        &mut pen,
+        fpadding,
+        fpadding,
+        width as f32,
+        height as f32,
+        Color::from_rgba8(220, 220, 220, 255),
+    );
+
     for rect in selection_rects {
         draw_rect(
             &mut pen,

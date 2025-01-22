@@ -90,7 +90,7 @@ pub enum BreakReason {
     Emergency,
 }
 
-#[derive(Clone, Default)]
+#[derive(Clone, Default, Debug)]
 pub(crate) struct LineData {
     /// Range of the source text.
     pub(crate) text_range: Range<usize>,
